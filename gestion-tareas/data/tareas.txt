@@ -1,0 +1,3 @@
+1;Repasar CRUD con archivos txt;2026-01-17;Estudiar Spring 2;LISTO;2026-01-25
+2;Rocket League;2026-01-18;DORMIR;LISTO;2026-01-31
+3;Viaja en familia;2026-01-18;Paseo 2;PENDIENTE;2026-01-31

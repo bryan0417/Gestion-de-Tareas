@@ -1,0 +1,23 @@
+# ========================
+# Frontend (Angular)
+# ========================
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+
+# ========================
+# Backend (Spring Boot)
+# ========================
+backend/target/
+
+# ========================
+# IDEs
+# ========================
+.vscode/
+.idea/
+
+# ========================
+# Sistema
+# ========================
+*.log
+.DS_Store
