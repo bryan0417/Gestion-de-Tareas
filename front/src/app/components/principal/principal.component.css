@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+.content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.btn-add {
+  background-color: #1976d2;
+  color: white;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buscar-tarea {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 295px;
+  margin-bottom: 30px;
+}
+
+.form-input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+/* Grid */
+.tareas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* Card */
+.tarea-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.tarea-info {
+  padding: 1.2rem;
+}
+
+.tarea-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tarea-details p {
+  font-size: .85rem;
+  margin: 0.3rem 0;
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  gap: .5rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  flex: 1;
+  font-size: .8rem;
+  padding: .5rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-view { background: #1976d2; color: white; }
+.btn-edit { background: #ffc107; color: white; }
+.btn-delete { background: #e53935; color: white; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .tareas-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .tareas-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .tareas-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="content">
+
+    <!-- Header -->
+    <div class="header">
+      <h1>Gestión de Tareas</h1>
+      <button type="button" class="btn-add" (click)="irFormulario()">
+        Agregar Tarea
+      </button>
+    </div>
+
+    <div class="buscar-tarea">
+      <input type="text" class="form-input" placeholder="Buscar tarea por titulo..." (input)="buscarTarea($event)">
+    </div>
+
+    <!-- Grid -->
+    <div class="tareas-grid">
+
+      <div class="tarea-card" *ngFor="let tarea of tareas">
+
+        <div class="tarea-info">
+          <h3 class="tarea-title">
+            {{ tarea.titulo }}
+          </h3>
+
+          <div class="tarea-details">
+            <p><strong>Descripción: </strong>{{ tarea.descripcion }}</p>
+            <p><strong>Estado: </strong>{{ tarea.estado }}</p>
+            <p><strong>Fecha Registro: </strong>{{ tarea.fechaRegistro }}</p>
+            <p><strong>Fecha Límite: </strong>{{ tarea.fechaLimite }}</p>
+          </div>
+
+          <div class="action-buttons">
+            <button type="button" class="btn btn-edit" (click)="irActualizar(tarea.idTarea)">Editar</button>
+            <button type="button" class="btn btn-delete" (click)="eliminarTarea(tarea.idTarea)">Eliminar</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>Agregar Tarea</h2>
+
+  <form [formGroup]="tareaForm" (ngSubmit)="guardar()">
+
+    <div>
+      <label>Id</label>
+      <input type="number" formControlName="idTarea" (input)="verificarId($event)">
+
+      <small *ngIf="idExiste" style="color: red;">
+        ❌ El ID ya existe
+      </small>
+    </div>
+
+    <div class="buscarTitulo">
+      <label>Titulo de la tarea</label>
+      <input type="text" formControlName="titulo">
+    </div>
+
+    <div>
+      <label>Descripción</label>
+      <input type="text" formControlName="descripcion">
+    </div>
+
+    <div>
+      <label>Fecha Límite</label>
+      <input type="date" formControlName="fechaLimite">
+    </div>
+
+
+    <!-- Botones -->
+    <div class="button-container">
+      <button type="button" (click)="router.navigate(['/'])">Atrás</button>
+      <button type="submit" class="btn btn-danger" [disabled]="idExiste">Guardar</button>
+    </div>
+
+  </form>
+</div>

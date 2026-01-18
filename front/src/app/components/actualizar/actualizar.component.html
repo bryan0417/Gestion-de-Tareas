@@ -1,0 +1,43 @@
+<div class="container">
+  <h2>Editar Tarea</h2>
+
+  <form [formGroup]="tareaForm" (ngSubmit)="actualizar()">
+    
+    <div>
+      <label>Id</label>
+      <input type="number" formControlName="idTarea" readonly>
+    </div>
+
+    <div>
+      <label>Titulo</label>
+      <input type="text" formControlName="titulo">
+    </div>
+
+    <div>
+      <label>Descripción</label>
+      <input type="text" formControlName="descripcion">
+    </div>
+
+    <div>
+      <label>Fecha Registrada</label>
+      <input type="date" formControlName="fechaRegistro" readonly>
+    </div>
+
+    <div>
+      <label>Estado</label>
+      <input type="text" formControlName="estado">
+    </div>
+
+    <div>
+      <label>Fecha Límite</label>
+      <input type="date" formControlName="fechaLimite">
+    </div>
+
+    <!-- Botones -->
+    <div class="button-container">
+      <button type="button" (click)="router.navigate(['/'])">Cancelar</button>
+      <button type="submit" [disabled]="tareaForm.invalid">Actualizar</button>
+    </div>
+
+  </form>
+</div>

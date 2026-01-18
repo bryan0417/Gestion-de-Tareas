@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+.header-verde {
+    background-color: #78BE20;
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+}
+
+img {
+    width: 120px;
+}
+
+body.nuevaClinica {
+    background-color: #78BE20;
+}
+
+form {
+    padding:30px;
+}
+
+.btn-costume {
+    background-color: black;
+    color: white;
+}
+
+.table-transparent {
+    background-color: transparent;
+}
+
+.table-transparent th,
+.table-transparent td {
+    background-color: transparent;
+}
+
+.table-transparent tbody tr:nth-child(odd) {
+    background-color: transparent;
+}
+
+.table-transparent tbody tr:nth-child(even) {
+    background-color: transparent;
+}
+
+
